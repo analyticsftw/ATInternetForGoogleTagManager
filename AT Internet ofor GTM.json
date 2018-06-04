@@ -1,0 +1,259 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2018-06-04 08:07:17",
+    "containerVersion": {
+        "path": "accounts/27888/containers/9180158/versions/0",
+        "accountId": "27888",
+        "containerId": "9180158",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/27888/containers/9180158",
+            "accountId": "27888",
+            "containerId": "9180158",
+            "name": "AT Internet",
+            "publicId": "GTM-N3K7RFN",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1528098615594",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/27888/containers/9180158/workspaces?apiLink=container"
+        },
+        "tag": [
+            {
+                "accountId": "27888",
+                "containerId": "9180158",
+                "tagId": "1",
+                "name": "AT Internet - Page vue",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "convertJsValuesToExpressions",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<!-- \n\tScript de suivi AT Internet (XiTi)\n\tRéférence: http://help.atinternet-solutions.com/fr/implementation/general/abouttagging_fr.htm\n-->\n<script type=\"text/javascript\">\n\txtnv = document;        \n\txtsd = \"http://{{AT Internet - ID de serveur}}\";\n\txtsite = \"{{AT Internet - ID de site}}\";\n\txtn2 = \"{{AT Internet - Site niveau 2}}\";      \n\txtpage = \"{{AT Internet - Nom de page}}\";\n\n  \t// Paramètres ci-dessous à compléter suivant niveau d'expertise / sophistication\n\txt_multc = \"&x1=&x2=&x3=&x4=&x5=\";\n\txt_an = \"\";        //user ID\n\txt_ac = \"\";        //category ID\n\t//do not modify below\n\tif (window.xtparam!=null){window.xtparam+=\"&ac=\"+xt_ac+\"&an=\"+xt_an+xt_multc;}\n\telse{window.xtparam=\"&ac=\"+xt_ac+\"&an=\"+xt_an+xt_multc;};\n</script>\n<script type=\"text/javascript\" src=\"{{AT Internet - URL du xtcore}}\"></script>\n<!-- Fin AT Internet -->"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1528099532876",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "27888",
+                "containerId": "9180158",
+                "variableId": "2",
+                "name": "AT Internet - ID de serveur",
+                "type": "c",
+                "notes": "Cette variable est rattachée à votre compte AT Internet",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "logc123"
+                    }
+                ],
+                "fingerprint": "1528096823744"
+            },
+            {
+                "accountId": "27888",
+                "containerId": "9180158",
+                "variableId": "1",
+                "name": "AT Internet - ID de site",
+                "type": "c",
+                "notes": "Cette variable contient l'identifiant du site à traquer",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "12345"
+                    }
+                ],
+                "fingerprint": "1528097045327"
+            },
+            {
+                "accountId": "27888",
+                "containerId": "9180158",
+                "variableId": "4",
+                "name": "AT Internet - Nom de page",
+                "type": "jsm",
+                "notes": "A moins d'utiliser un traitement particulier ou le dataLayer, le nom de page prendra la valeur de l'URL de la page",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function(){\n\t/*\n    \tA moins d'utiliser un traitement particulier ou le dataLayer, \n        le nom de page prendra la valeur de l'URL de la page\n    */\n  \treturn {{Page URL}};\n}"
+                    }
+                ],
+                "fingerprint": "1528098046185"
+            },
+            {
+                "accountId": "27888",
+                "containerId": "9180158",
+                "variableId": "3",
+                "name": "AT Internet - Site niveau 2",
+                "type": "remm",
+                "notes": "A adapter en fonction des sections du site ou du dataLayer",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{AT Internet - ID de serveur}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "fullMatch",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "replaceAfterMatch",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultValue",
+                        "value": "1"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "ignoreCase",
+                        "value": "true"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "/dossier1"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "2"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "/dossier2"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "3"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "/blog"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "4"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "/boutique"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "5"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1528097776641"
+            },
+            {
+                "accountId": "27888",
+                "containerId": "9180158",
+                "variableId": "5",
+                "name": "AT Internet - URL du xtcore",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "/js/xtcore.js"
+                    }
+                ],
+                "fingerprint": "1528098615594"
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "27888",
+                "containerId": "9180158",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "27888",
+                "containerId": "9180158",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "27888",
+                "containerId": "9180158",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "27888",
+                "containerId": "9180158",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "27888",
+                "containerId": "9180158",
+                "type": "EVENT",
+                "name": "Event"
+            }
+        ],
+        "fingerprint": "0",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/27888/containers/9180158/versions/0?apiLink=version"
+    }
+}
